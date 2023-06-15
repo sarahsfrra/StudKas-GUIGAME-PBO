@@ -51,43 +51,70 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="labelPlayerName" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="labelPlayerHp" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPlayerAtk" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPlayerDef" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="labelNpcName" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="104" max="32767" attributes="0"/>
-                              <Component id="labelEnemyName" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelAtkSiapa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="labelNpcHp" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="labelEnemyHp" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelNpcDef" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="labelEnemyDef" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelNpcAtk" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="labelEnemyAtk" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelNpcName" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="104" max="32767" attributes="0"/>
+                                      <Component id="labelEnemyName" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="labelNpcHp" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="labelEnemyHp" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   </Group>
               </Group>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+              <Component id="ButtonAtk1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Component id="ButtonAtk2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="labelStatus1" alignment="0" min="-2" pref="346" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="buttonAttack" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel4" min="-2" pref="36" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              </Group>
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Component id="labelStatus1" alignment="0" min="-2" pref="346" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jLabel4" min="-2" pref="36" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="labelStatus2" min="-2" pref="368" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="labelStatus2" min="-2" pref="368" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="buttonAttack" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -110,9 +137,28 @@
                   <Component id="labelNpcHp" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="labelEnemyHp" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="111" max="32767" attributes="0"/>
-              <Component id="buttonAttack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="labelPlayerAtk" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelNpcAtk" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelEnemyAtk" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="labelPlayerDef" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelNpcDef" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="labelEnemyDef" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
+              <Component id="labelAtkSiapa" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ButtonAtk1" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="ButtonAtk2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="buttonAttack" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="labelStatus1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="labelStatus2" min="-2" max="-2" attributes="0"/>
@@ -178,6 +224,57 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPlayerAtk">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelNpcAtk">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelEnemyAtk">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelPlayerDef">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelNpcDef">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelEnemyDef">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ButtonAtk1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonAtk1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="labelAtkSiapa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="ButtonAtk2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton2"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonAtk2ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

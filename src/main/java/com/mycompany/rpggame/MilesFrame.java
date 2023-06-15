@@ -21,6 +21,7 @@ public class MilesFrame extends javax.swing.JFrame {
      * Creates new form MILES
      */
     public MilesFrame() {
+        
         player = new Hero("Liz",1,100);
         npc = new Hero("Selma", 1, 100);
         enemy = new Enemy("Sarah",1,100);
@@ -44,14 +45,44 @@ public class MilesFrame extends javax.swing.JFrame {
         
         labelPlayerHp.setForeground(Color.WHITE);
         labelPlayerHp.setText("HP : " + player.getHp());
-      
+        
+        labelNpcHp.setForeground(Color.WHITE);
+        labelNpcHp.setText("HP : " + npc.getHp());
+           
+        labelEnemyHp.setForeground(Color.WHITE);
+        labelEnemyHp.setText("HP : " + enemy.getHp());
+        
+        labelPlayerAtk.setForeground(Color.WHITE);
+        labelPlayerAtk.setText("ATK : " + player.getWeapon().getAtk());
+        
+        labelNpcAtk.setForeground(Color.WHITE);
+        labelNpcAtk.setText("ATK : " + npc.getWeapon().getAtk());
+        
+        labelEnemyAtk.setForeground(Color.WHITE);
+        labelEnemyAtk.setText("ATK : " + enemy.getWeapon().getAtk());
+        
+        labelPlayerDef.setForeground(Color.WHITE);
+        labelPlayerDef.setText("DEF : " + player.getDef());
+        
+        labelNpcDef.setForeground(Color.WHITE);
+        labelNpcDef.setText("DEF : " + npc.getDef());
+        
+        labelEnemyDef.setForeground(Color.WHITE);
+        labelEnemyDef.setText("DEF : " + enemy.getDef());
+        
         labelStatus1.setForeground(Color.WHITE);
         labelStatus2.setForeground(Color.WHITE);
         
-    
-        
         buttonAttack.setBackground(Color.BLACK);
         buttonAttack.setForeground(Color.WHITE);
+        
+         ButtonAtk1.setBackground(Color.BLACK);
+          ButtonAtk2.setBackground(Color.BLACK);
+           ButtonAtk1.setForeground(Color.WHITE);
+           ButtonAtk2.setForeground(Color.WHITE);
+          
+        ButtonAtk1.setText(npc.getName());
+         ButtonAtk2.setText(enemy.getName());
     }
 
     /**
@@ -75,6 +106,15 @@ public class MilesFrame extends javax.swing.JFrame {
         labelStatus1 = new javax.swing.JLabel();
         labelStatus2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        labelPlayerAtk = new javax.swing.JLabel();
+        labelNpcAtk = new javax.swing.JLabel();
+        labelEnemyAtk = new javax.swing.JLabel();
+        labelPlayerDef = new javax.swing.JLabel();
+        labelNpcDef = new javax.swing.JLabel();
+        labelEnemyDef = new javax.swing.JLabel();
+        ButtonAtk1 = new javax.swing.JButton();
+        labelAtkSiapa = new javax.swing.JLabel();
+        ButtonAtk2 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -114,6 +154,34 @@ public class MilesFrame extends javax.swing.JFrame {
 
         jLabel4.setText("-");
 
+        labelPlayerAtk.setText("jLabel2");
+
+        labelNpcAtk.setText("jLabel2");
+
+        labelEnemyAtk.setText("jLabel2");
+
+        labelPlayerDef.setText("jLabel2");
+
+        labelNpcDef.setText("jLabel3");
+
+        labelEnemyDef.setText("jLabel5");
+
+        ButtonAtk1.setText("jButton1");
+        ButtonAtk1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAtk1ActionPerformed(evt);
+            }
+        });
+
+        labelAtkSiapa.setText("jLabel2");
+
+        ButtonAtk2.setText("jButton2");
+        ButtonAtk2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAtk2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,37 +191,58 @@ public class MilesFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelPlayerName)
-                            .addComponent(labelPlayerHp))
+                            .addComponent(labelPlayerHp)
+                            .addComponent(labelPlayerAtk)
+                            .addComponent(labelPlayerDef))
                         .addGap(116, 116, 116)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelNpcName)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
-                                .addComponent(labelEnemyName))
+                                .addComponent(labelAtkSiapa)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelNpcHp)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelEnemyHp)))
-                        .addGap(47, 47, 47))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelNpcDef)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelEnemyDef))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelNpcAtk)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelEnemyAtk))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelNpcName)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                                        .addComponent(labelEnemyName))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(labelNpcHp)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelEnemyHp)))
+                                .addGap(47, 47, 47))))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(ButtonAtk1)
+                .addGap(56, 56, 56)
+                .addComponent(ButtonAtk2)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(buttonAttack)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(19, 19, 19)))
-                            .addGap(162, 162, 162))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(labelStatus2, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap()))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(labelStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(181, 181, 181))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(labelStatus2, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(buttonAttack)
+                        .addGap(161, 161, 161))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,9 +259,25 @@ public class MilesFrame extends javax.swing.JFrame {
                     .addComponent(labelPlayerHp)
                     .addComponent(labelNpcHp)
                     .addComponent(labelEnemyHp))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addComponent(buttonAttack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPlayerAtk)
+                    .addComponent(labelNpcAtk)
+                    .addComponent(labelEnemyAtk))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelPlayerDef)
+                    .addComponent(labelNpcDef)
+                    .addComponent(labelEnemyDef))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(labelAtkSiapa)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonAtk1)
+                    .addComponent(ButtonAtk2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(buttonAttack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelStatus1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelStatus2)
@@ -186,17 +291,39 @@ public class MilesFrame extends javax.swing.JFrame {
 
     private void buttonAttackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAttackActionPerformed
         // TODO add your handling code here:
-        player.attack(npc);
+        String status1, status2;
+        if(choice == 1){
+            player.attack(npc);
+            status1 = Character.getReport(player, npc, "menyerang");
+        } else{
+            player.attack(enemy);
+            status1 = Character.getReport(player, enemy, "menyerang");
+        }
+       
         npc.attack(enemy);
         enemy.attack(player);
         
-        String status1 = Character.getReport(player, npc, "menyerang");
-        String status2 = Character.getReport(npc,enemy,"menyerang");
+        
+         status2 = Character.getReport(npc,enemy,"menyerang");
         
         labelStatus1.setText(status1);
         labelStatus2.setText(status2);
       
     }//GEN-LAST:event_buttonAttackActionPerformed
+    
+    
+    private void ButtonAtk1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtk1ActionPerformed
+      choice = 1;
+      ButtonAtk1.setBackground(Color.red);
+       ButtonAtk2.setBackground(Color.BLACK);
+    }//GEN-LAST:event_ButtonAtk1ActionPerformed
+
+    private void ButtonAtk2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtk2ActionPerformed
+
+      choice = 2;
+       ButtonAtk2.setBackground(Color.red);
+       ButtonAtk1.setBackground(Color.BLACK);
+    }//GEN-LAST:event_ButtonAtk2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,15 +361,26 @@ public class MilesFrame extends javax.swing.JFrame {
         });
     }
 
+    private int choice;
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonAtk1;
+    private javax.swing.JButton ButtonAtk2;
     private javax.swing.JButton buttonAttack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel labelAtkSiapa;
+    private javax.swing.JLabel labelEnemyAtk;
+    private javax.swing.JLabel labelEnemyDef;
     private javax.swing.JLabel labelEnemyHp;
     private javax.swing.JLabel labelEnemyName;
+    private javax.swing.JLabel labelNpcAtk;
+    private javax.swing.JLabel labelNpcDef;
     private javax.swing.JLabel labelNpcHp;
     private javax.swing.JLabel labelNpcName;
+    private javax.swing.JLabel labelPlayerAtk;
+    private javax.swing.JLabel labelPlayerDef;
     private javax.swing.JLabel labelPlayerHp;
     private javax.swing.JLabel labelPlayerName;
     private javax.swing.JLabel labelStatus1;

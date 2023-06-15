@@ -25,6 +25,7 @@ public class Apayah {
         miles = new MilesFrame();
         miles.add(label);
         miles.setTitle("rpg GAME");
+
         
         miles.setLocationRelativeTo(null);
         miles.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
